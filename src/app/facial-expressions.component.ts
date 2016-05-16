@@ -13,21 +13,20 @@ import { ObjectValues } from './object-values.pipe';
 })
 export class FacialExpressionsAppComponent {
   
-  urlDeLaImagen: string;
+  urlDeLaImagen: string = 'http://nuragroup.com/wp-content/uploads/2015/02/Fearful-Businessman.jpg';
   resultados: any;
+  
 
-  constructor(sd: ServicioDeDatosService) {
+  constructor(public sd: ServicioDeDatosService) { }
 
-    sd.consultarEmocion(this.urlDeLaImagen).subscribe(
+  consultarAPI(url: string) {
+    this.resultados = '';
+    
+    this.sd.consultarEmocion(this.urlDeLaImagen).subscribe(
       data => this.resultados = data.json(),
       err => console.log(err),
       () => console.log('Completed!')
     );
-
-  }
-
-  consultarAPI(url: string){
-    console.log(`La url de la imagen es ${url}`);
-    this.resultados = url.split('');
+    
   }
 }

@@ -14,7 +14,7 @@ export class ServicioDeDatosService {
       'Ocp-Apim-Subscription-Key': '58438078c43844b283fd5dfae398ead2'
     });
 
-    let dato = JSON.stringify({ "url": 'http://farm7.static.flickr.com/6071/6083328037_93eb5c88e8_b.jpg' })
+    let dato = JSON.stringify({ "url": direccionDeLaImagen })
 
     return this.http.post(this.apiUrl, dato, {headers: headers})
     // .post(,
