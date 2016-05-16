@@ -19,8 +19,10 @@
 
 
 
-<section class="resultados">
-  <div class="card" *ngIf="resultados">
-    {{resultados}}
+<section class="resultados" *ngIf="resultados">
+  <div class="card" *ngFor="let resultado of resultados">
+    <div *ngFor="let score of resultado.scores | objectValues">
+      {{score[0]}}: {{score[1]*100}}
+    </div>
   </div>
 </section>
