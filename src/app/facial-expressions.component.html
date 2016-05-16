@@ -7,9 +7,9 @@
   </div>
 
   <div class="acciones" layout="column">
-    <input type="text" placeholder="http://ejemplo.com/image.png">
+    <input type="text" placeholder="http://ejemplo.com/image.png" [(ngModel)]="urlDeLaImagen">
     
-    <button>¡Consultar!</button>
+    <button (click)="consultarAPI(urlDeLaImagen)">¡Consultar!</button>
   </div>
 
 </section>
@@ -20,5 +20,7 @@
 
 
 <section class="resultados">
-  <!-- Los resultados aparecerán aquí -->
+  <div class="card" *ngIf="resultados">
+    {{resultados}}
+  </div>
 </section>

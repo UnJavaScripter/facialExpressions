@@ -7,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['facial-expressions.component.css']
 })
 export class FacialExpressionsAppComponent {
-  title = 'facial-expressions works!';
+  
+  urlDeLaImagen: string;
+  resultados: any;
+
+  constructor() {
+    console.log('¡Modulo principal cargado con éxito!');
+  }
+
+  consultarAPI(url: string){
+    console.log(`La url de la imagen es ${url}`);
+    this.resultados = url.split('');
+  }
 }
