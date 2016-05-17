@@ -16,13 +16,8 @@ export class ServicioDeDatosService {
 
     let dato = JSON.stringify({ "url": 'http://farm7.static.flickr.com/6071/6083328037_93eb5c88e8_b.jpg' })
 
-    return this.http.post(this.apiUrl, dato, {headers: headers})
-    // .post(,
-    //   dato,
-    //   { headers: headers }
-    // )
-    //.map(respuesta => respuesta.json())
-      
+    return this.http.post(this.apiUrl, dato, { headers: headers });
+
       
   }
 
