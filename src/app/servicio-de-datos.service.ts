@@ -16,13 +16,7 @@ export class ServicioDeDatosService {
 
     let dato = JSON.stringify({ "url": direccionDeLaImagen })
 
-    return this.http.post(this.apiUrl, dato, {headers: headers})
-    // .post(,
-    //   dato,
-    //   { headers: headers }
-    // )
-    //.map(respuesta => respuesta.json())
-      
+    return this.http.post(this.apiUrl, dato, {headers: headers});
       
   }
 
